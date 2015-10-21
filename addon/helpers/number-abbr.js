@@ -32,7 +32,7 @@ export function numberAbbr([number = 0, delimiter = '.', maxSignificantPlaces = 
   });
 
   const result = Ember.A(results).find( (result, index) => {
-    return number.toString().length <= (index+1)*3;
+    return parseInt(number).toString().length <= (index+1)*3;
   });
 
   return result;
